@@ -1,12 +1,16 @@
+import React, { useState } from 'react';
 import Controls from './components/Controls';
 import ReviewList from './components/ReviewList';
 import ramenReviews from './data/ramen-reviews.json';
 import logo from './logo.svg';
 import './App.css';
 
-console.log(ramenReviews);
+
+
 
 function App() {
+  const [reviews] = useState(ramenReviews);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,7 +22,7 @@ function App() {
 
       <Controls />
 
-      <ReviewList />
+      <ReviewList reviews={reviews}/>
     </div>
   );
 }

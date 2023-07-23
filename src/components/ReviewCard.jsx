@@ -5,6 +5,14 @@ const ReviewCard = ({ review }) => {
 
   return (
     <div>
+      {review.map((review) => (
+        <div key={review.ID}>
+          <h2>{review.URL}</h2>
+          <p>{review.Brand}</p>
+          <p>{review.Variety}</p>
+          <p>{review.Stars}</p>
+        </div>
+      ))}
       <a className="review-link" href={URL} target="_blank"rel="noreferrer" >
         <div className="review-card">
           <div className="review-prop variety"><strong>{Variety}</strong></div>
