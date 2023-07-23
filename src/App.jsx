@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Controls from './components/Controls';
 import ReviewList from './components/ReviewList';
 import ramenReviews from './data/ramen-reviews.json';
@@ -9,7 +9,7 @@ import './App.css';
 
 
 function App() {
-  const [reviews] = useState(ramenReviews);
+  // const [reviews] = useState(ramenReviews);
 
   return (
     <div className="App">
@@ -22,7 +22,7 @@ function App() {
 
       <Controls />
 
-      <ReviewList reviews={reviews}/>
+      <ReviewList reviews={ramenReviews}/>
     </div>
   );
 }
