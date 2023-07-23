@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Controls from './components/Controls';
 import ReviewList from './components/ReviewList';
 import ramenReviews from './data/ramen-reviews.json';
@@ -9,8 +9,9 @@ import './App.css';
 
 
 function App() {
-  // const [reviews] = useState(ramenReviews);
-
+  const [reviews] = useState(ramenReviews);
+  const [counter, setCounter] = useState(10);
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -20,9 +21,9 @@ function App() {
 
       <hr />
 
-      <Controls />
+      <Controls counter={counter} setCounter={setCounter} />
 
-      <ReviewList reviews={ramenReviews}/>
+      <ReviewList reviews={reviews}/>
     </div>
   );
 }
