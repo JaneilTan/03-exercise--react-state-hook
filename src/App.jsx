@@ -11,7 +11,7 @@ import './App.css';
 function App() {
   const [reviews] = useState(ramenReviews);
   const [counter, setCounter] = useState(10);
-  
+
   return (
     <div className="App">
       <header className="App-header">

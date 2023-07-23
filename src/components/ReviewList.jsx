@@ -2,15 +2,20 @@ import ReviewCard from './ReviewCard';
 import './ReviewList.css';
 
 const ReviewList = ({ reviews }) => {
+  const slicedReviews = reviews.slice(0, 10);
+
+  console.log(slicedReviews);
 
   return (
-    <div className="review-list">
-      
-      
-      <ReviewCard  reviews={reviews} />
-      
     
-    </div>
+    <>
+      {slicedReviews.map((review) => (
+      <div key ={review.ID} className="review-list">
+
+       <ReviewCard review={review} />
+      </div>
+      ))}
+    </>
   );
 };
 
