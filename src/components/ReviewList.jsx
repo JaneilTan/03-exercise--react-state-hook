@@ -1,10 +1,9 @@
 import ReviewCard from './ReviewCard';
 import './ReviewList.css';
 
-const ReviewList = ({ reviews }) => {
-  const slicedReviews = reviews.slice(0, 10);
+const ReviewList = ({ reviews, limit }) => {
+  const slicedReviews = reviews.slice(0, limit);
 
-  console.log(slicedReviews);
 
   return (
     

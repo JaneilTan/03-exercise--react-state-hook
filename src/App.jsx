@@ -10,8 +10,9 @@ import './App.css';
 
 function App() {
   const [reviews] = useState(ramenReviews);
-  const [counter, setCounter] = useState(10);
-
+  // const [counter, setCounter] = useState(10);
+  const [limit, setLimit] = useState(10);
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -21,9 +22,9 @@ function App() {
 
       <hr />
 
-      <Controls counter={counter} setCounter={setCounter} />
+      <Controls limit={limit} setLimit={setLimit} />
 
-      <ReviewList reviews={reviews}/>
+      <ReviewList reviews={reviews} limit={limit}/>
     </div>
   );
 }
